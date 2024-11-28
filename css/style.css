@@ -1,0 +1,80 @@
+* {
+    box-sizing:border-box ;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* CSS Variables  */
+:root{
+    --bgColor:#eeea;
+    --fontColor:blue;
+    --gradeStart:orange;
+    --gradeEnd:red;
+}
+
+.container{
+    background-color: var(--bgColor);
+}
+
+.container h1{
+    color: var(--fontColor);
+
+}
+
+.container .box-1{
+    width: 300px;
+    height: 300px;
+    border:2px solid cyan;
+    /* background-image:conic-gradient(red, yellow) */
+    background: rgb(34,193,195);
+background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(202,87,59,1) 15%, rgba(201,55,139,1) 42%, rgba(199,253,45,1) 100%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 300px;
+
+}
+
+input[placeholder]{
+    color:red;
+    font-size: 24px;
+}
+
+input[type="email"]{
+    background-color: var(--fontColor);
+}
+
+.container .box-2{
+    width: 300px;
+    height: 300px;
+    border: solid 1px red;
+    background-color: var(--fontColor);
+    margin: 0 auto;
+    position: relative;
+}
+
+.container .box-2::before{
+    content:"";
+    width: 70px;
+    height: 70px;
+    background-color: var(--fontColor);
+    position: absolute;
+    border-radius: 50%;
+    top: -20px;
+    left: -20px;
+}
+
+.container .box-2::after{
+    content:"";
+    width: 70px;
+    height: 70px;
+    background-color: var(--fontColor);
+    position: absolute;
+    border-radius: 50%;
+    bottom: -20px;
+    right: -20px;
+}
